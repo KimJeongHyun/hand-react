@@ -65,6 +65,18 @@ Source Map이란, 빌드한 파일과 원본 파일을 연결시켜주는 기능
 
 별개로, source map은 어플리케이션에서 개발자 도구를 켰을 때 생성되는 것으로 번들링 파일에 영향을 주지 않습니다.
 
+### plugins
+
+이 프로젝트에 사용된 webpack plugin은 아래와 같습니다.
+
+* ProvidePlugin
+  * 자주 사용되는 모듈을 미리 등록합니다. 이 경우, 반복적으로 작성하는 모듈에 대한 수고로움을 덜 수 있습니다.
+* HotModuleReplacementPlugin
+  * 라이브 리로드를 가능케합니다. 메모리에 가상의 번들링 파일을 두고, 코드 업데이트가 트리거될 때마다 해당 번들링 파일에 변경사항을 실시간으로 적용하면서 개발에 대한 편의성을 높힙니다.
+* HtmlWebpackPlugin
+  * 빌드 후, dist 파일 하위에 index.html을 만들어주어야 앱 실행이 가능한데, 이 작업을 자동화해줍니다.
+  * template 필드에 해당 index.html 파일이 담긴 경로를 작성해주면 빌드시 dist 폴더에 index.html이 자동으로 생성됩니다.
+
 ## babel
 
 * 참고링크 : https://jeonghwan-kim.github.io/series/2019/12/22/frontend-dev-env-babel.html#52-%ED%8F%B4%EB%A6%AC%ED%95%84
@@ -81,3 +93,14 @@ Polyfill이란, 해당 브라우저 버전에 존재하지 않는 코드 조각�
 또한 babel에는 preset이 있어 복잡한 설정 없는 사용이 가능하기도 합니다.
 * Ex)babel-preset-airbnb
   * https://github.com/airbnb/babel-preset-airbnb
+ 
+### preset
+
+이 프로젝트에 적용된 Babel preset은 아래와 같습니다.
+
+* @babel/preset-env
+  * babel 컴파일러가 지원할 환경을 구분합니다.
+  * 딱히 관련하여 작성한 코드는 없긴 하지만, target을 지정하여 각 브라우저의 어떤 버전까지 지원할 것인가에 대해 정의할 수 있습니다.
+  * https://jeonghwan-kim.github.io/series/2019/12/22/frontend-dev-env-babel.html
+ 
+* @babel/preset-typescript
