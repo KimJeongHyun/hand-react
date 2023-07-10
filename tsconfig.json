@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    /* Projects */
+    /* Language and Environment */
+    /* ts basic options */
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "allowJs": true /* js 확장자 허용 */,
+    "jsx": "react" /* preserve : 일반 jsx , react : react.createElement로 만들어진 jsx, react-native : jsx로 보이지만 js로 출력 */,
+    /*
+    preserve : 작성된 코드에 React를 삽입하긴 하지만, 노드 자체는 일반 jsx 형태로 출력  
+    react-native : preserve와 동일
+    react : 작성된 코드를 React.createElement 방식으로 변환하여 출력
+    react-jsx : 작성된 코드를 react/jsx-runtime으로 변환하여 출력
+    react-jsxdev : 작성된 코드를 react/jsx-dev-runtime으로 변환하여 출력
+
+    */
+    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
+    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
+    /* strict check option */
+    "strict": true /* Enable all strict type-checking options. 타입 체크 옵션 전부 활성화. */,
+
+    /* additional check option */
+    "noUnusedLocals": true /* 로컬 미사용시 오류 출력, 사용되지 않은 지역 변수 */,
+    "noUnusedParameters": true /* 함수 파라미터 미사용시 오류 출력. 컴포넌트 = 함수이므로 props 미사용시에도 오류 출력 */,
+
+    /* module analyze option */
+    "baseUrl": "./" /* 모듈 기본 참조 위치 */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+
+    /* ts advanced option */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. d.ts 타입 검사 생략 */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */
+  },
+  /* project compile exclude */
+  "exclude": ["node_modules"],
+  /* project complie include */
+  "include": ["**/*.ts", "**/*.tsx"]
+}
+
+// https://inpa.tistory.com/entry/TS-%F0%9F%93%98-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-tsconfigjson-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-%EC%B4%9D%EC%A0%95%EB%A6%AC
